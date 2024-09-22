@@ -23,4 +23,15 @@ public class ControlaBola : MonoBehaviour
         Vector3 movebola = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
         transform.position += movebola * velocidade * Time.deltaTime;
     }
+
+    void OnTriggerEnter(Collider other)
+    {
+        Debug.Log(other.tag);
+        if (other.gameObject.tag == "PickUp")
+        {
+            other.gameObject.SetActive(false);
+        }
+
+        condicaovitoria.instance.somaponto();
+    }
 }

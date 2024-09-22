@@ -7,7 +7,7 @@ public class giracubo : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        //danieléumserhumanosemluz
     }
 
     // Update is called once per frame
